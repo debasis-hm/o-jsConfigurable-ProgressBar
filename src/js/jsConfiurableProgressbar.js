@@ -1,8 +1,8 @@
-function origamijsConfigurableDistro_bar(parms) {
+function origamijsConfigurableProgress_bar(parms) {
 
 		let db = this;
 
-	    db.draw_DistroBar = function(parms){
+	    db.draw_ProgressBar = function(parms){
 
 
    				if( parms.animationstyle == "o-progressBar"){
@@ -57,10 +57,10 @@ function origamijsConfigurableDistro_bar(parms) {
 
 	};
 
- let ojsConfigurableDistrobarobj = new origamijsConfigurableDistro_bar();
+ let ojsConfigurableProgressbarobj = new origamijsConfigurableProgress_bar();
 	export default function (parms) {
 		if(parms!= undefined){
-			   ojsConfigurableDistrobarobj.draw_DistroBar(parms);
+			   ojsConfigurableProgressbarobj.draw_ProgressBar(parms);
 		}	   
 	 
 	}
