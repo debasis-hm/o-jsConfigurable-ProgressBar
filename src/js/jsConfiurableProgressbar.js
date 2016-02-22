@@ -11,25 +11,25 @@ function origamijsConfigurableProgress_bar(parms) {
 
 					if(jsonDatalength){
 
-						var index = -1;
+						let index = -1;
 
 						setInterval(function() {
 							index++;
 							if(index < jsonDatalength){
 
-								var parentDiv = document.getElementById(parms.dataLabels[index].progresshtmlElement);
-								var outerclsinfo = parms.dataLabels[index].outerBackgroundclassName;
+								let parentDiv = document.getElementById(parms.dataLabels[index].progresshtmlElement);
+								let outerclsinfo = parms.dataLabels[index].outerBackgroundclassName;
 								if(outerclsinfo){parentDiv.classList.add(outerclsinfo);}							
 
-										var innerDiv = document.createElement("DIV");
-										var innerclsinfo = parms.dataLabels[index].className;
+										let innerDiv = document.createElement("DIV");
+										let innerclsinfo = parms.dataLabels[index].className;
 										innerDiv.classList.add(innerclsinfo);
 										parentDiv.appendChild(innerDiv);
-										var width = 0;
-										var progressjson = parms.dataLabels[index].progress;
+										let width = 0;
+										let progressjson = parms.dataLabels[index].progress;
 										if(progressjson){
 
-											var progress = setInterval(function () { 
+											let progress = setInterval(function () { 
 													if (width == progressjson) {
 														 clearInterval(progress);						
 													}
