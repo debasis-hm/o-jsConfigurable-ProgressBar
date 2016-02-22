@@ -1,0 +1,17 @@
+{
+    "name": "o-jsConfigurable-ProgressBar",
+    "version": "1.0.0",
+    "authors": [
+    "Debasis Satapathy <debasis.p.satapathy@happiestminds.com>"
+  ],
+    "description": "draw a distribution bar ",
+    "main": ["main.js","main.scss"],
+    "keywords": [
+    "graph"
+  ],
+    "license": "MIT",
+    "homepage": "index.html",
+    "dependencies": {
+          
+    }
+}
