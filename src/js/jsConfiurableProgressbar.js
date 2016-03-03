@@ -1,6 +1,7 @@
 function origamijsConfigurableProgress_bar(parms) {
 
 		let db = this;
+		
 
 	    db.draw_ProgressBar = function(parms){
 
