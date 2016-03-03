@@ -29,6 +29,7 @@ function origamijsConfigurableProgress_bar(parms) {
 										let width = 0;
 										let progressjson = parms.dataLabels[index].progress;
 										if(!progressjson){
+											
 											if(progressjson >= 0 && progressjson <= 100){
 												let progress = setInterval(function () { 
 													if (width == progressjson) {
