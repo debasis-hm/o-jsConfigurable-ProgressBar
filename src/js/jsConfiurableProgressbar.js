@@ -1,7 +1,7 @@
 function origamijsConfigurableProgress_bar(parms) {
 
 		let db = this;
-		
+
 
 	    db.draw_ProgressBar = function(parms){
 
@@ -28,9 +28,9 @@ function origamijsConfigurableProgress_bar(parms) {
 										parentDiv.appendChild(innerDiv);
 										let width = 0;
 										let progressjson = parms.dataLabels[index].progress;
-										if(progressjson){
-
-											let progress = setInterval(function () { 
+										if(!progressjson){
+											if(progressjson >= 0 && progressjson <= 100){
+												let progress = setInterval(function () { 
 													if (width == progressjson) {
 														 clearInterval(progress);						
 													}
@@ -41,9 +41,13 @@ function origamijsConfigurableProgress_bar(parms) {
 													    innerDiv.innerHTML = width+ "%";													    	
 													}
 																	    
-										     }, 30); 
-										}
+										     	}, 30); 
+											}
+											else {
 
+												console.log("please enter valid data.");
+											}
+										}
 
 							}
 						},100);
