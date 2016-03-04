@@ -27,10 +27,10 @@ function origamijsConfigurableProgress_bar(parms) {
 										innerDiv.classList.add(innerclsinfo);
 										parentDiv.appendChild(innerDiv);
 										let width = 0;
-										let progressjson = Math.round(parms.dataLabels[index].progress);
-										if(!progressjson){
-											
-											if(progressjson > 0 && progressjson <= 100){
+
+										let progressjson = Math.round(parms.dataLabels[index].progress) || 0;
+										if(progressjson >= 0 && progressjson <= 100 ){
+											if(progressjson > 0){
 												let progress = setInterval(function () { 
 													if (width == progressjson) {
 														 clearInterval(progress);						
@@ -45,10 +45,16 @@ function origamijsConfigurableProgress_bar(parms) {
 										     	}, 30); 
 											}
 											else {
-
-												console.log("please enter valid data.");
+												innerDiv.style.width = "0%";	
+												
 											}
 										}
+											else
+											  {
+											  	
+											  	console.log("Invalid data");
+											  }
+
 
 							}
 						},100);
