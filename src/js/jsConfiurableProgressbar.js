@@ -27,10 +27,10 @@ function origamijsConfigurableProgress_bar(parms) {
 										innerDiv.classList.add(innerclsinfo);
 										parentDiv.appendChild(innerDiv);
 										let width = 0;
-										let progressjson = parms.dataLabels[index].progress;
+										let progressjson = Math.round(parms.dataLabels[index].progress);
 										if(!progressjson){
 											
-											if(progressjson >= 0 && progressjson <= 100){
+											if(progressjson > 0 && progressjson <= 100){
 												let progress = setInterval(function () { 
 													if (width == progressjson) {
 														 clearInterval(progress);						
