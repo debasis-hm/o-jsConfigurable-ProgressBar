@@ -51,7 +51,7 @@ function origamijsConfigurableProgress_bar(parms) {
 										}
 											else
 											  {
-											  	
+											  	innerDiv.style.width = "0%";
 											  	console.log("Invalid data");
 											  }
 
