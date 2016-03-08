@@ -44,7 +44,7 @@ function origamijsConfigurableProgress_bar(parms) {
 													    innerspan.innerHTML = width+ "%";
 													}
 																	    
-										     	}, 30); 
+										     	}, 10); 
 											}
 											else {
 												innerDiv.style.width = "0%";	
