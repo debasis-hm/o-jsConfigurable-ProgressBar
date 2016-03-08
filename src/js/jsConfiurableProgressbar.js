@@ -23,9 +23,11 @@ function origamijsConfigurableProgress_bar(parms) {
 								if(outerclsinfo){parentDiv.classList.add(outerclsinfo);}							
 
 										let innerDiv = document.createElement("DIV");
+										let innerspan = document.createElement("span");
 										let innerclsinfo = parms.dataLabels[index].className;
 										innerDiv.classList.add(innerclsinfo);
 										parentDiv.appendChild(innerDiv);
+										parentDiv.appendChild(innerspan);
 										let width = 0;
 
 										let progressjson = Math.round(parms.dataLabels[index].progress) || 0;
@@ -39,13 +41,15 @@ function origamijsConfigurableProgress_bar(parms) {
 														width++;
 														innerDiv.style.display = "inline-block";
 														innerDiv.style.width = width+ "%";													   
-													    innerDiv.innerHTML = width+ "%";													    	
+													    innerspan.innerHTML = width+ "%";
 													}
 																	    
 										     	}, 30); 
 											}
 											else {
 												innerDiv.style.width = "0%";	
+												innerspan.innerHTML = "0%";
+												//innerDiv.style.marginLeft  ="42%";
 												
 											}
 										}
